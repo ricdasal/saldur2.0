@@ -670,3 +670,594 @@ Processing by ProductosController#index as HTML
 Completed 200 OK in 11ms (Views: 6.1ms | ActiveRecord: 3.5ms | Allocations: 2817)
 
 
+Started GET "/" for 127.0.0.1 at 2022-08-25 08:05:09 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (88.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/2.7.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.7.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 70.0ms | Allocations: 572)
+Completed 200 OK in 593ms (Views: 219.8ms | ActiveRecord: 0.0ms | Allocations: 5123)
+
+
+Started GET "/productos" for 127.0.0.1 at 2022-08-25 08:05:26 -0500
+Processing by ProductosController#index as HTML
+  [1m[36mProducto Load (209.7ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+  ↳ app/controllers/productos_controller.rb:5:in `index'
+Completed 200 OK in 560ms (Views: 166.6ms | ActiveRecord: 342.2ms | Allocations: 6478)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5073945470573576205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateClientes (20220825132632)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (407.0ms)[0m  [1m[35mCREATE TABLE "clientes" ("id" bigserial primary key, "nombre" character varying, "cedula" character varying, "correo" character varying, "telefono" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220825132632"]]
+  [1m[36mTRANSACTION (12.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (20.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(5073945470573576205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (22.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProducto Create (76.0ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "descripcion", "precio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "Motoroil 40"], ["descripcion", "Tanque 255 galones"], ["precio", 1], ["created_at", "2022-08-26 10:32:16.224421"], ["updated_at", "2022-08-26 10:32:16.224421"]]
+  [1m[36mTRANSACTION (9.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProducto Create (0.7ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "descripcion", "precio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "2 tiempos"], ["descripcion", "Tanque 255 galones"], ["precio", 2], ["created_at", "2022-08-26 10:32:16.319420"], ["updated_at", "2022-08-26 10:32:16.319420"]]
+  [1m[36mTRANSACTION (13.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProducto Create (0.8ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "descripcion", "precio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "SAE 40"], ["descripcion", "Tanque 255 galones"], ["precio", 490], ["created_at", "2022-08-26 10:32:16.341282"], ["updated_at", "2022-08-26 10:32:16.341282"]]
+  [1m[36mTRANSACTION (13.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProducto Create (0.8ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "descripcion", "precio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "Hidraulico Amarillo"], ["descripcion", "Tanque de 255 galones"], ["precio", 360], ["created_at", "2022-08-26 10:32:16.363783"], ["updated_at", "2022-08-26 10:32:16.363783"]]
+  [1m[36mTRANSACTION (12.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProducto Create (0.7ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "descripcion", "precio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "Hidraulico Rojo"], ["descripcion", "Tanque de 255 galones"], ["precio", 360], ["created_at", "2022-08-26 10:32:16.385474"], ["updated_at", "2022-08-26 10:32:16.385474"]]
+  [1m[36mTRANSACTION (13.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5073945470573576205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (21.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(5073945470573576205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProducto Create (0.4ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "descripcion", "precio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "Motoroil 40"], ["descripcion", "Tanque 255 galones"], ["precio", 1], ["created_at", "2022-08-26 10:32:38.758232"], ["updated_at", "2022-08-26 10:32:38.758232"]]
+  [1m[36mTRANSACTION (16.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProducto Create (0.3ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "descripcion", "precio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "2 tiempos"], ["descripcion", "Tanque 255 galones"], ["precio", 2], ["created_at", "2022-08-26 10:32:38.778293"], ["updated_at", "2022-08-26 10:32:38.778293"]]
+  [1m[36mTRANSACTION (8.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProducto Create (0.4ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "descripcion", "precio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "SAE 40"], ["descripcion", "Tanque 255 galones"], ["precio", 490], ["created_at", "2022-08-26 10:32:38.789460"], ["updated_at", "2022-08-26 10:32:38.789460"]]
+  [1m[36mTRANSACTION (7.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProducto Create (0.4ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "descripcion", "precio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "Hidraulico Amarillo"], ["descripcion", "Tanque de 255 galones"], ["precio", 360], ["created_at", "2022-08-26 10:32:38.800877"], ["updated_at", "2022-08-26 10:32:38.800877"]]
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProducto Create (0.5ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "descripcion", "precio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "Hidraulico Rojo"], ["descripcion", "Tanque de 255 galones"], ["precio", 360], ["created_at", "2022-08-26 10:32:38.812191"], ["updated_at", "2022-08-26 10:32:38.812191"]]
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/clientes" for 127.0.0.1 at 2022-08-26 05:36:05 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/lrichteryu/Desktop/saldur2.0/backend1/app/controllers/clientes_controller.rb:40: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/clientes_controller.rb:40: syntax error, unexpected `end', expecting end-of-input
+app/controllers/clientes_controller.rb:40: syntax error, unexpected `end', expecting end-of-input
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-08-26 05:36:07 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/clientes" for 127.0.0.1 at 2022-08-26 05:36:56 -0500
+Processing by ClientesController#index as HTML
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 1787)
+
+
+  
+NameError (uninitialized constant ClientesController::Clientes):
+  
+app/controllers/clientes_controller.rb:3:in `index'
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-08-26 05:36:56 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/clientes" for 127.0.0.1 at 2022-08-26 05:37:52 -0500
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (8.0ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 1.3ms | ActiveRecord: 8.0ms | Allocations: 1131)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProducto Create (0.5ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "descripcion", "precio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "Motoroil 40"], ["descripcion", "Tanque 255 galones"], ["precio", 1], ["created_at", "2022-08-26 10:38:01.927860"], ["updated_at", "2022-08-26 10:38:01.927860"]]
+  [1m[36mTRANSACTION (19.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProducto Create (0.4ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "descripcion", "precio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "2 tiempos"], ["descripcion", "Tanque 255 galones"], ["precio", 2], ["created_at", "2022-08-26 10:38:01.951218"], ["updated_at", "2022-08-26 10:38:01.951218"]]
+  [1m[36mTRANSACTION (7.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProducto Create (0.4ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "descripcion", "precio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "SAE 40"], ["descripcion", "Tanque 255 galones"], ["precio", 490], ["created_at", "2022-08-26 10:38:01.962370"], ["updated_at", "2022-08-26 10:38:01.962370"]]
+  [1m[36mTRANSACTION (18.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProducto Create (0.7ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "descripcion", "precio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "Hidraulico Amarillo"], ["descripcion", "Tanque de 255 galones"], ["precio", 360], ["created_at", "2022-08-26 10:38:01.985194"], ["updated_at", "2022-08-26 10:38:01.985194"]]
+  [1m[36mTRANSACTION (14.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProducto Create (0.7ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "descripcion", "precio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "Hidraulico Rojo"], ["descripcion", "Tanque de 255 galones"], ["precio", 360], ["created_at", "2022-08-26 10:38:02.007880"], ["updated_at", "2022-08-26 10:38:02.007880"]]
+  [1m[36mTRANSACTION (13.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProducto Create (0.5ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "descripcion", "precio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "Motoroil 40"], ["descripcion", "Tanque 255 galones"], ["precio", 1], ["created_at", "2022-08-26 10:38:46.304237"], ["updated_at", "2022-08-26 10:38:46.304237"]]
+  [1m[36mTRANSACTION (92.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProducto Create (0.8ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "descripcion", "precio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "2 tiempos"], ["descripcion", "Tanque 255 galones"], ["precio", 2], ["created_at", "2022-08-26 10:38:46.401635"], ["updated_at", "2022-08-26 10:38:46.401635"]]
+  [1m[36mTRANSACTION (32.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProducto Create (0.7ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "descripcion", "precio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "SAE 40"], ["descripcion", "Tanque 255 galones"], ["precio", 490], ["created_at", "2022-08-26 10:38:46.442308"], ["updated_at", "2022-08-26 10:38:46.442308"]]
+  [1m[36mTRANSACTION (13.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProducto Create (0.7ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "descripcion", "precio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "Hidraulico Amarillo"], ["descripcion", "Tanque de 255 galones"], ["precio", 360], ["created_at", "2022-08-26 10:38:46.464260"], ["updated_at", "2022-08-26 10:38:46.464260"]]
+  [1m[36mTRANSACTION (14.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProducto Create (0.7ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "descripcion", "precio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "Hidraulico Rojo"], ["descripcion", "Tanque de 255 galones"], ["precio", 360], ["created_at", "2022-08-26 10:38:46.486317"], ["updated_at", "2022-08-26 10:38:46.486317"]]
+  [1m[36mTRANSACTION (14.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCliente Create (17.1ms)[0m  [1m[32mINSERT INTO "clientes" ("nombre", "cedula", "correo", "telefono", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "aaaaaaaa"], ["cedula", "0000000000"], ["correo", "laksdjlaskd@asdjasd.ec"], ["telefono", "5555555555"], ["created_at", "2022-08-26 10:38:46.527857"], ["updated_at", "2022-08-26 10:38:46.527857"]]
+  [1m[36mTRANSACTION (43.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCliente Create (0.7ms)[0m  [1m[32mINSERT INTO "clientes" ("nombre", "cedula", "correo", "telefono", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "aaaaaaaa"], ["cedula", "0000000000"], ["correo", "laksdjlaskd@asdjasd.ec"], ["telefono", "5555555555"], ["created_at", "2022-08-26 10:38:46.597131"], ["updated_at", "2022-08-26 10:38:46.597131"]]
+  [1m[36mTRANSACTION (14.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCliente Create (0.8ms)[0m  [1m[32mINSERT INTO "clientes" ("nombre", "cedula", "correo", "telefono", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "aaaaaaaa"], ["cedula", "0000000000"], ["correo", "laksdjlaskd@asdjasd.ec"], ["telefono", "5555555555"], ["created_at", "2022-08-26 10:38:46.619445"], ["updated_at", "2022-08-26 10:38:46.619445"]]
+  [1m[36mTRANSACTION (24.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCliente Create (0.8ms)[0m  [1m[32mINSERT INTO "clientes" ("nombre", "cedula", "correo", "telefono", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "aaaaaaaa"], ["cedula", "0000000000"], ["correo", "laksdjlaskd@asdjasd.ec"], ["telefono", "5555555555"], ["created_at", "2022-08-26 10:38:46.652641"], ["updated_at", "2022-08-26 10:38:46.652641"]]
+  [1m[36mTRANSACTION (13.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCliente Create (0.8ms)[0m  [1m[32mINSERT INTO "clientes" ("nombre", "cedula", "correo", "telefono", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "aaaaaaaa"], ["cedula", "0000000000"], ["correo", "laksdjlaskd@asdjasd.ec"], ["telefono", "5555555555"], ["created_at", "2022-08-26 10:38:46.674815"], ["updated_at", "2022-08-26 10:38:46.674815"]]
+  [1m[36mTRANSACTION (13.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCliente Create (0.8ms)[0m  [1m[32mINSERT INTO "clientes" ("nombre", "cedula", "correo", "telefono", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "aaaaaaaa"], ["cedula", "0000000000"], ["correo", "laksdjlaskd@asdjasd.ec"], ["telefono", "5555555555"], ["created_at", "2022-08-26 10:38:46.696886"], ["updated_at", "2022-08-26 10:38:46.696886"]]
+  [1m[36mTRANSACTION (13.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCliente Create (0.8ms)[0m  [1m[32mINSERT INTO "clientes" ("nombre", "cedula", "correo", "telefono", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "aaaaaaaa"], ["cedula", "0000000000"], ["correo", "laksdjlaskd@asdjasd.ec"], ["telefono", "5555555555"], ["created_at", "2022-08-26 10:38:46.719136"], ["updated_at", "2022-08-26 10:38:46.719136"]]
+  [1m[36mTRANSACTION (13.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCliente Create (0.7ms)[0m  [1m[32mINSERT INTO "clientes" ("nombre", "cedula", "correo", "telefono", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "aaaaaaaa"], ["cedula", "0000000000"], ["correo", "laksdjlaskd@asdjasd.ec"], ["telefono", "5555555555"], ["created_at", "2022-08-26 10:38:46.741144"], ["updated_at", "2022-08-26 10:38:46.741144"]]
+  [1m[36mTRANSACTION (13.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCliente Create (0.8ms)[0m  [1m[32mINSERT INTO "clientes" ("nombre", "cedula", "correo", "telefono", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "aaaaaaaa"], ["cedula", "0000000000"], ["correo", "laksdjlaskd@asdjasd.ec"], ["telefono", "5555555555"], ["created_at", "2022-08-26 10:38:46.763375"], ["updated_at", "2022-08-26 10:38:46.763375"]]
+  [1m[36mTRANSACTION (13.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCliente Create (0.8ms)[0m  [1m[32mINSERT INTO "clientes" ("nombre", "cedula", "correo", "telefono", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "aaaaaaaa"], ["cedula", "0000000000"], ["correo", "laksdjlaskd@asdjasd.ec"], ["telefono", "5555555555"], ["created_at", "2022-08-26 10:38:46.798884"], ["updated_at", "2022-08-26 10:38:46.798884"]]
+  [1m[36mTRANSACTION (11.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/clientes" for 127.0.0.1 at 2022-08-26 05:38:50 -0500
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.5ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/controllers/clientes_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 15.0ms | ActiveRecord: 3.9ms | Allocations: 7833)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5073945470573576205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePedidos (20220826104127)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1119.2ms)[0m  [1m[35mCREATE TABLE "pedidos" ("id" bigserial primary key, "nombre_ciente" character varying, "direccion" character varying, "estado" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220826104127"]]
+  [1m[36mTRANSACTION (32.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(5073945470573576205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5073945470573576205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5073945470573576205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5073945470573576205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateItemPedidos (20220826110330)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (62.7ms)[0m  [1m[35mCREATE TABLE "item_pedidos" ("id" bigserial primary key, "id_pedido" integer, "id_producto" integer, "cantidad" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220826110330"]]
+  [1m[36mTRANSACTION (11.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(5073945470573576205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5073945470573576205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5073945470573576205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/productos" for 127.0.0.1 at 2022-08-26 06:23:04 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductosController#index as HTML
+  [1m[36mProducto Load (0.7ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+  ↳ app/controllers/productos_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 8.8ms | ActiveRecord: 4.7ms | Allocations: 6408)
+
+
+Started GET "/productos/3" for 127.0.0.1 at 2022-08-26 06:25:11 -0500
+Processing by ProductosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProducto Load (0.3ms)[0m  [1m[34mSELECT "productos".* FROM "productos" WHERE "productos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/productos_controller.rb:9:in `show'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 2128)
+
+
+Started GET "/productos" for 127.0.0.1 at 2022-08-26 06:25:18 -0500
+Processing by ProductosController#index as HTML
+  [1m[36mProducto Load (0.5ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+  ↳ app/controllers/productos_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.5ms | Allocations: 2893)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedido Create (0.6ms)[0m  [1m[32mINSERT INTO "pedidos" ("nombre_ciente", "direccion", "estado", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre_ciente", "aaaaaaaa"], ["direccion", "3215132;65465465;654654"], ["estado", "aprobado"], ["created_at", "2022-08-26 11:48:44.738028"], ["updated_at", "2022-08-26 11:48:44.738028"]]
+  [1m[36mTRANSACTION (23.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedido Create (0.3ms)[0m  [1m[32mINSERT INTO "pedidos" ("nombre_ciente", "direccion", "estado", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre_ciente", "aaaaaaaa"], ["direccion", "3215132;65465465;654654"], ["estado", "En espera"], ["created_at", "2022-08-26 11:48:44.764816"], ["updated_at", "2022-08-26 11:48:44.764816"]]
+  [1m[36mTRANSACTION (8.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedido Create (0.4ms)[0m  [1m[32mINSERT INTO "pedidos" ("nombre_ciente", "direccion", "estado", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre_ciente", "aaaaaaaa"], ["direccion", "3215132;65465465;654654"], ["estado", "entregado"], ["created_at", "2022-08-26 11:48:44.776088"], ["updated_at", "2022-08-26 11:48:44.776088"]]
+  [1m[36mTRANSACTION (7.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItemPedido Create (1.3ms)[0m  [1m[32mINSERT INTO "item_pedidos" ("id_pedido", "id_producto", "cantidad", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id_pedido", 1], ["id_producto", 1], ["cantidad", 1], ["created_at", "2022-08-26 11:48:44.804429"], ["updated_at", "2022-08-26 11:48:44.804429"]]
+  [1m[36mTRANSACTION (7.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItemPedido Create (0.7ms)[0m  [1m[32mINSERT INTO "item_pedidos" ("id_pedido", "id_producto", "cantidad", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id_pedido", 1], ["id_producto", 3], ["cantidad", 1], ["created_at", "2022-08-26 11:48:44.821594"], ["updated_at", "2022-08-26 11:48:44.821594"]]
+  [1m[36mTRANSACTION (13.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItemPedido Create (0.7ms)[0m  [1m[32mINSERT INTO "item_pedidos" ("id_pedido", "id_producto", "cantidad", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id_pedido", 1], ["id_producto", 2], ["cantidad", 1], ["created_at", "2022-08-26 11:48:44.843877"], ["updated_at", "2022-08-26 11:48:44.843877"]]
+  [1m[36mTRANSACTION (13.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItemPedido Create (0.8ms)[0m  [1m[32mINSERT INTO "item_pedidos" ("id_pedido", "id_producto", "cantidad", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id_pedido", 1], ["id_producto", 1], ["cantidad", 1], ["created_at", "2022-08-26 11:48:44.865927"], ["updated_at", "2022-08-26 11:48:44.865927"]]
+  [1m[36mTRANSACTION (13.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItemPedido Create (0.9ms)[0m  [1m[32mINSERT INTO "item_pedidos" ("id_pedido", "id_producto", "cantidad", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id_pedido", 1], ["id_producto", 3], ["cantidad", 1], ["created_at", "2022-08-26 11:48:44.889229"], ["updated_at", "2022-08-26 11:48:44.889229"]]
+  [1m[36mTRANSACTION (10.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItemPedido Create (0.8ms)[0m  [1m[32mINSERT INTO "item_pedidos" ("id_pedido", "id_producto", "cantidad", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id_pedido", 2], ["id_producto", 1], ["cantidad", 1], ["created_at", "2022-08-26 11:48:44.910243"], ["updated_at", "2022-08-26 11:48:44.910243"]]
+  [1m[36mTRANSACTION (13.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItemPedido Create (0.7ms)[0m  [1m[32mINSERT INTO "item_pedidos" ("id_pedido", "id_producto", "cantidad", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id_pedido", 2], ["id_producto", 4], ["cantidad", 1], ["created_at", "2022-08-26 11:48:44.932413"], ["updated_at", "2022-08-26 11:48:44.932413"]]
+  [1m[36mTRANSACTION (12.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItemPedido Create (0.7ms)[0m  [1m[32mINSERT INTO "item_pedidos" ("id_pedido", "id_producto", "cantidad", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id_pedido", 2], ["id_producto", 5], ["cantidad", 1], ["created_at", "2022-08-26 11:48:44.968126"], ["updated_at", "2022-08-26 11:48:44.968126"]]
+  [1m[36mTRANSACTION (10.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItemPedido Create (0.6ms)[0m  [1m[32mINSERT INTO "item_pedidos" ("id_pedido", "id_producto", "cantidad", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id_pedido", 2], ["id_producto", 3], ["cantidad", 1], ["created_at", "2022-08-26 11:48:44.987066"], ["updated_at", "2022-08-26 11:48:44.987066"]]
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItemPedido Create (0.6ms)[0m  [1m[32mINSERT INTO "item_pedidos" ("id_pedido", "id_producto", "cantidad", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id_pedido", 3], ["id_producto", 1], ["cantidad", 1], ["created_at", "2022-08-26 11:48:44.998065"], ["updated_at", "2022-08-26 11:48:44.998065"]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItemPedido Create (0.5ms)[0m  [1m[32mINSERT INTO "item_pedidos" ("id_pedido", "id_producto", "cantidad", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id_pedido", 3], ["id_producto", 2], ["cantidad", 1], ["created_at", "2022-08-26 11:48:45.008761"], ["updated_at", "2022-08-26 11:48:45.008761"]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItemPedido Create (0.6ms)[0m  [1m[32mINSERT INTO "item_pedidos" ("id_pedido", "id_producto", "cantidad", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id_pedido", 3], ["id_producto", 4], ["cantidad", 1], ["created_at", "2022-08-26 11:48:45.020165"], ["updated_at", "2022-08-26 11:48:45.020165"]]
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItemPedido Create (0.6ms)[0m  [1m[32mINSERT INTO "item_pedidos" ("id_pedido", "id_producto", "cantidad", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id_pedido", 3], ["id_producto", 3], ["cantidad", 1], ["created_at", "2022-08-26 11:48:45.031396"], ["updated_at", "2022-08-26 11:48:45.031396"]]
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItemPedido Create (0.6ms)[0m  [1m[32mINSERT INTO "item_pedidos" ("id_pedido", "id_producto", "cantidad", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id_pedido", 3], ["id_producto", 5], ["cantidad", 1], ["created_at", "2022-08-26 11:48:45.042443"], ["updated_at", "2022-08-26 11:48:45.042443"]]
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/pedidos" for 127.0.0.1 at 2022-08-26 06:48:56 -0500
+Processing by PedidosController#index as HTML
+  [1m[36mPedido Load (0.5ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos"[0m
+  ↳ app/controllers/pedidos_controller.rb:4:in `index'
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 12.8ms | Allocations: 7547)
+
+
+Started GET "/items_pedidos" for 127.0.0.1 at 2022-08-26 06:49:04 -0500
+  
+ActionController::RoutingError (uninitialized constant ItemsPedidosController
+Did you mean?  ItemPedidosController):
+  
+Started GET "/item_pedidos" for 127.0.0.1 at 2022-08-26 06:49:23 -0500
+Processing by ItemPedidosController#index as HTML
+  [1m[36mItemPedido Load (0.4ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos"[0m
+  ↳ app/controllers/item_pedidos_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 9.3ms | ActiveRecord: 4.5ms | Allocations: 5351)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5073945470573576205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5073945470573576205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/item_pedidos" for 127.0.0.1 at 2022-08-26 08:45:47 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ItemPedidosController#index as HTML
+  [1m[36mItemPedido Load (0.4ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos"[0m
+  ↳ app/controllers/item_pedidos_controller.rb:4:in `index'
+Completed 200 OK in 20ms (Views: 7.5ms | ActiveRecord: 3.4ms | Allocations: 19741)
+
+
+Started GET "/item_pedidos/2" for 127.0.0.1 at 2022-08-26 08:45:54 -0500
+Processing by ItemPedidosController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 591)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find ItemPedido without an ID):
+  
+app/controllers/item_pedidos_controller.rb:8:in `show'
+Started GET "/" for 127.0.0.1 at 2022-08-26 08:56:11 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/2.7.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.7.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.1ms | Allocations: 376)
+Completed 200 OK in 50ms (Views: 7.2ms | Allocations: 3279)
+
+
+Started GET "/pedidos" for 127.0.0.1 at 2022-08-26 08:56:19 -0500
+Processing by PedidosController#index as HTML
+  [1m[36mPedido Load (1.1ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos"[0m
+  ↳ app/controllers/pedidos_controller.rb:4:in `index'
+Completed 200 OK in 32ms (Views: 30.3ms | ActiveRecord: 14.4ms | Allocations: 7524)
+
+
+Started GET "/item_pedidos" for 127.0.0.1 at 2022-08-26 08:56:28 -0500
+Processing by ItemPedidosController#index as HTML
+  [1m[36mItemPedido Load (0.9ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos"[0m
+  ↳ app/controllers/item_pedidos_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.9ms | Allocations: 3056)
+
+
+Started GET "/item_pedidos/2" for 127.0.0.1 at 2022-08-26 08:56:34 -0500
+Processing by ItemPedidosController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 404 Not Found in 0ms (ActiveRecord: 0.0ms | Allocations: 125)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find ItemPedido without an ID):
+  
+app/controllers/item_pedidos_controller.rb:8:in `show'
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-08-26 08:56:34 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/item_pedidos/2" for 127.0.0.1 at 2022-08-26 08:57:10 -0500
+Processing by ItemPedidosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItemPedido Load (0.2ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/item_pedidos_controller.rb:8:in `show'
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 3.6ms | Allocations: 2591)
+
+
+Started GET "/item_pedidos/" for 127.0.0.1 at 2022-08-26 08:57:24 -0500
+Processing by ItemPedidosController#index as HTML
+  [1m[36mItemPedido Load (0.3ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos"[0m
+  ↳ app/controllers/item_pedidos_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.3ms | Allocations: 1743)
+
+
+Started GET "/item_pedidos/43" for 127.0.0.1 at 2022-08-26 08:57:32 -0500
+Processing by ItemPedidosController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[36mItemPedido Load (0.4ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/item_pedidos_controller.rb:8:in `show'
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 686)
+
+
+Started GET "/item_pedidos/1" for 127.0.0.1 at 2022-08-26 08:57:38 -0500
+Processing by ItemPedidosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItemPedido Load (0.2ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/item_pedidos_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 685)
+
+
+Started GET "/item_pedidos/111" for 127.0.0.1 at 2022-08-26 08:57:44 -0500
+Processing by ItemPedidosController#show as HTML
+  Parameters: {"id"=>"111"}
+  [1m[36mItemPedido Load (0.6ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/item_pedidos_controller.rb:8:in `show'
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 0.6ms | Allocations: 693)
+
+
+Started GET "/item_pedidos/" for 127.0.0.1 at 2022-08-26 08:58:08 -0500
+Processing by ItemPedidosController#index as HTML
+  [1m[36mItemPedido Load (0.4ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos"[0m
+  ↳ app/controllers/item_pedidos_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.4ms | Allocations: 1734)
+
+
+Started GET "/item_pedidos/" for 127.0.0.1 at 2022-08-26 08:58:12 -0500
+Processing by ItemPedidosController#index as HTML
+  [1m[36mItemPedido Load (0.3ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos"[0m
+  ↳ app/controllers/item_pedidos_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.3ms | Allocations: 1734)
+
+
+Started GET "/item_pedidos/1" for 127.0.0.1 at 2022-08-26 08:58:17 -0500
+Processing by ItemPedidosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItemPedido Load (0.3ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/item_pedidos_controller.rb:8:in `show'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 685)
+
+
+Started GET "/item_pedidos/" for 127.0.0.1 at 2022-08-26 08:58:59 -0500
+Processing by ItemPedidosController#index as HTML
+  [1m[36mItemPedido Load (0.2ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos"[0m
+  ↳ app/controllers/item_pedidos_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 5.1ms | ActiveRecord: 3.0ms | Allocations: 3510)
+
+
+Started GET "/item_pedidos/2" for 127.0.0.1 at 2022-08-26 08:59:08 -0500
+Processing by ItemPedidosController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 114)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/item_pedidos_controller.rb:8:in `show'
+Started GET "/item_pedidos/2" for 127.0.0.1 at 2022-08-26 09:01:24 -0500
+Processing by ItemPedidosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItemPedido Load (0.2ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" IS NULL[0m
+  ↳ app/controllers/item_pedidos_controller.rb:9:in `show'
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 1.2ms | Allocations: 1459)
+
+
+Started GET "/item_pedidos/" for 127.0.0.1 at 2022-08-26 09:01:28 -0500
+Processing by ItemPedidosController#index as HTML
+  [1m[36mItemPedido Load (0.3ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos"[0m
+  ↳ app/controllers/item_pedidos_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 2.2ms | Allocations: 2738)
+
+
+Started GET "/item_pedidos/qwqw" for 127.0.0.1 at 2022-08-26 09:01:32 -0500
+Processing by ItemPedidosController#show as HTML
+  Parameters: {"id"=>"qwqw"}
+  [1m[36mItemPedido Load (0.3ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" IS NULL[0m
+  ↳ app/controllers/item_pedidos_controller.rb:9:in `show'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 671)
+
+
+Started GET "/item_pedidos/" for 127.0.0.1 at 2022-08-26 09:01:37 -0500
+Processing by ItemPedidosController#index as HTML
+  [1m[36mItemPedido Load (0.3ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos"[0m
+  ↳ app/controllers/item_pedidos_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.3ms | Allocations: 1734)
+
+
+Started GET "/item_pedidos/1" for 127.0.0.1 at 2022-08-26 09:01:45 -0500
+Processing by ItemPedidosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItemPedido Load (0.3ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" IS NULL[0m
+  ↳ app/controllers/item_pedidos_controller.rb:9:in `show'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 671)
+
+
+Started GET "/item_pedidos/1" for 127.0.0.1 at 2022-08-26 09:06:11 -0500
+  
+SyntaxError (/home/lrichteryu/Desktop/saldur2.0/backend1/app/controllers/item_pedidos_controller.rb:9: syntax error, unexpected ':', expecting `end'
+        id_pedido: params[:id_pedido]
+                 ^
+):
+  
+app/controllers/item_pedidos_controller.rb:9: syntax error, unexpected ':', expecting `end'
+app/controllers/item_pedidos_controller.rb:9: syntax error, unexpected ':', expecting `end'
+Started GET "/item_pedidos/1" for 127.0.0.1 at 2022-08-26 09:07:30 -0500
+  
+SyntaxError (/home/lrichteryu/Desktop/saldur2.0/backend1/app/controllers/item_pedidos_controller.rb:9: syntax error, unexpected ':', expecting `end'
+        id_pedido: params[:id_pedido]
+                 ^
+):
+  
+app/controllers/item_pedidos_controller.rb:9: syntax error, unexpected ':', expecting `end'
+app/controllers/item_pedidos_controller.rb:9: syntax error, unexpected ':', expecting `end'
+Started GET "/item_pedidos/1" for 127.0.0.1 at 2022-08-26 09:07:46 -0500
+  
+SyntaxError (/home/lrichteryu/Desktop/saldur2.0/backend1/app/controllers/item_pedidos_controller.rb:9: syntax error, unexpected ':', expecting `end'
+        id_pedido: params[:id_pedido]
+                 ^
+):
+  
+app/controllers/item_pedidos_controller.rb:9: syntax error, unexpected ':', expecting `end'
+app/controllers/item_pedidos_controller.rb:9: syntax error, unexpected ':', expecting `end'
+Started GET "/item_pedidos/1" for 127.0.0.1 at 2022-08-26 09:09:22 -0500
+  
+SyntaxError (/home/lrichteryu/Desktop/saldur2.0/backend1/app/controllers/item_pedidos_controller.rb:9: syntax error, unexpected ':', expecting `end'
+        id_pedido: params[:id_pedido]
+                 ^
+):
+  
+app/controllers/item_pedidos_controller.rb:9: syntax error, unexpected ':', expecting `end'
+app/controllers/item_pedidos_controller.rb:9: syntax error, unexpected ':', expecting `end'
+Started GET "/item_pedid" for 127.0.0.1 at 2022-08-26 09:10:48 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/item_pedid"):
+  
+Started GET "/item_pedidos/" for 127.0.0.1 at 2022-08-26 09:12:47 -0500
+Processing by ItemPedidosController#index as HTML
+  [1m[36mItemPedido Load (0.3ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos"[0m
+  ↳ app/controllers/item_pedidos_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 6.2ms | ActiveRecord: 5.1ms | Allocations: 3529)
+
+
+Started GET "/item_pedidos/2" for 127.0.0.1 at 2022-08-26 09:13:06 -0500
+Processing by ItemPedidosController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 404 Not Found in 0ms (ActiveRecord: 0.0ms | Allocations: 125)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find ItemPedido without an ID):
+  
+app/controllers/item_pedidos_controller.rb:8:in `show'
+Started GET "/item_pedidos/2" for 127.0.0.1 at 2022-08-26 09:37:40 -0500
+Processing by ItemPedidosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItemPedido Load (0.4ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 2]]
+  ↳ app/controllers/item_pedidos_controller.rb:11:in `show'
+Completed 200 OK in 18ms (Views: 5.4ms | ActiveRecord: 5.9ms | Allocations: 5427)
+
+
+Started GET "/item_pedidos/" for 127.0.0.1 at 2022-08-26 09:37:46 -0500
+Processing by ItemPedidosController#index as HTML
+  [1m[36mItemPedido Load (0.5ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos"[0m
+  ↳ app/controllers/item_pedidos_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.5ms | Allocations: 1734)
+
+
+Started GET "/item_pedidos/3" for 127.0.0.1 at 2022-08-26 09:37:50 -0500
+Processing by ItemPedidosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItemPedido Load (0.4ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 2]]
+  ↳ app/controllers/item_pedidos_controller.rb:11:in `show'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.4ms | Allocations: 1003)
+
+
+Started GET "/item_pedidos/3" for 127.0.0.1 at 2022-08-26 09:39:23 -0500
+Processing by ItemPedidosController#show as HTML
+  Parameters: {"id"=>"3"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2146)
+
+
+  
+NoMethodError (undefined method `id_pedido' for #<ItemPedidosController:0x0000000004b5c8>):
+  
+app/controllers/item_pedidos_controller.rb:8:in `show'
+Started GET "/item_pedidos/3" for 127.0.0.1 at 2022-08-26 09:40:29 -0500
+Processing by ItemPedidosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItemPedido Load (0.2ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 3]]
+  ↳ app/controllers/item_pedidos_controller.rb:11:in `show'
+Completed 200 OK in 10ms (Views: 3.4ms | ActiveRecord: 4.7ms | Allocations: 2915)
+
+
+Started GET "/item_pedidos/43" for 127.0.0.1 at 2022-08-26 09:41:04 -0500
+Processing by ItemPedidosController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[36mItemPedido Load (0.2ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 43]]
+  ↳ app/controllers/item_pedidos_controller.rb:11:in `show'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 685)
+
+
+Started GET "/item_pedidos/4" for 127.0.0.1 at 2022-08-26 09:41:07 -0500
+Processing by ItemPedidosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mItemPedido Load (0.3ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 4]]
+  ↳ app/controllers/item_pedidos_controller.rb:11:in `show'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 685)
+
+
+Started GET "/item_pedidos/2" for 127.0.0.1 at 2022-08-26 09:41:10 -0500
+Processing by ItemPedidosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItemPedido Load (0.8ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 2]]
+  ↳ app/controllers/item_pedidos_controller.rb:11:in `show'
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.8ms | Allocations: 1012)
+
+
+Started GET "/item_pedidos/3" for 127.0.0.1 at 2022-08-26 09:41:16 -0500
+Processing by ItemPedidosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItemPedido Load (0.4ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 3]]
+  ↳ app/controllers/item_pedidos_controller.rb:11:in `show'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 1090)
+
+
