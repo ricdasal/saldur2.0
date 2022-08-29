@@ -1,0 +1,113 @@
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+    <title><%= title%></title>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("inputGroupSelect01").value;
+        document.getElementById("colocar").innerHTML =  x;
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <div id="botonCrearLista">
+          <!-- <button type="button" class="btn btn-success" routerLink="/user/lista">Crear Lista</button> -->
+          <h1>Listas de Productos</h1>  
+      </div>
+      <div *ngFor="let lista of listas">
+          <mat-card class="example-card">
+              <mat-card-header id="cabeceraLista">
+                  
+                  <div id="botonEliminar"> 
+                    <form ngNoForm method="POST" action="http://localhost:3001/users/listausuario/{{lista.id}}">
+                      <button class="btn btn-secondary eliminar" type="submit" >X</button>
+                    </form>
+                  </div>
+                  <div id="datosCabeceraLista">
+                      <!-- <div mat-card-avatar class="example-header-image"></div> -->
+                      <mat-card-title>{{lista.nombre}}</mat-card-title>
+                      <!-- <h3>{{lista.usuario.id}}</h3> -->
+                      <mat-card-subtitle>{{lista.usuario.nombre}}</mat-card-subtitle>
+                  </div>
+              </mat-card-header>
+              <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+              <mat-card-content>
+                
+                <div >
+                  <!-- <select class="custom-select" id="inputGroupSelect01" onchange="myFunction()">
+                    <option selected>Producto</option>
+                    <option *ngFor="let producto of productos" value="{{producto.nombre}}" >{{producto.nombre}}</option>
+                    
+    
+                  </select> -->
+                  <!-- <div *ngFor="let producto of productos">
+                      <option value="{{producto.id}}">{{producto.nombre}}</option>
+                    </div> -->
+
+                  <form ngNoForm method="POST" action="http://localhost:3001/users/detalle">
+                    <mat-form-field appearance="fill">
+                      <mat-label>Producto</mat-label>
+                      <mat-select [(value)]="selectedProducto" >
+                        <mat-option value="Productos" selected></mat-option>
+                        <mat-option  *ngFor="let producto of productos" value="{{producto.id}}" >
+                          {{producto.nombre}} 
+                        </mat-option>
+                      </mat-select>
+                    
+                        
+                      
+                    </mat-form-field>
+                    <input class="form-control" type="hidden" placeholder="idLista" name="idLista" value="{{lista.id}}">
+                    <input class="form-control" type="hidden" placeholder="idProducto" name="idProducto" value="{{selectedProducto}}">
+                    
+                    <p> Producto seleccionado: {{selectedProducto}} </p>
+                    <input class="form-control" type="hidden" placeholder="Nombre Producto" name="nombrePrProducto" value="{{selectedProducto}}">
+                    
+                    <button mat-raised-button type="submit" color="primary">Guardar</button>
+
+                  </form>
+
+
+
+                </div>
+                <h2>Productos</h2>
+                <div id="colocar" *ngFor="let detalle of detalles">
+                  <div  *ngFor="let producto of productos">
+                    <div *ngIf="detalle.listaId=== lista.id">
+                      <div *ngIf="detalle.productoId=== producto.id">
+                        <tr>
+                          <td>{{producto.nombre}}</td>
+                        </tr>
+                      </div>
+  
+                    </div>
+
+
+                  </div>
+                  
+
+                </div>
+
+                <!-- <p>
+                  The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                  A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                  bred for hunting.
+                </p> -->
+              </mat-card-content>
+              <!-- <mat-card-actions>
+                <button mat-button>LIKE</button>
+                <button mat-button>SHARE</button>
+              </mat-card-actions> -->
+            </mat-card>
+  
+      </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
+  <script src="/javascripts/productosLista.js"></script>
+  </body>

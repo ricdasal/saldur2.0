@@ -1,0 +1,130 @@
+<mat-toolbar>
+    <button mat-icon-button color="primary" aria-label="Example icon button with a menu icon" (click)="drawer.toggle()">
+       <mat-icon>menu</mat-icon>
+    </button>
+    <span>Bienvenido {{nombreusuario}}</span>
+  </mat-toolbar>
+  
+  <mat-drawer-container class="container-fluid" value="true">
+    <mat-drawer #drawer value="side" class="pegaito">
+        <!-- <button mat-stroked-button color="grey"  class="container-fluid espacio-boton" (click) = "cambiarPerfil();drawer.close();">opcion uno</button><br> -->
+        <button mat-stroked-button color="grey"  class="container-fluid espacio-boton" (click) = "cambiarPerfil();drawer.close();">Editar perfil</button><br>
+        <button mat-stroked-button color="grey"  class="container-fluid espacio-boton" (click) = "cambiarListas();drawer.close();">Ver Listas</button><br>
+        <button mat-stroked-button color="grey"  class="container-fluid espacio-boton" (click) = "cambiarLista();drawer.close();">Crear Listas</button><br>
+        <a href="http://localhost:3001/users/logout"><button mat-stroked-button color="warn"  class="container-fluid espacio-boton" (click) = "cambiarPerfil();drawer.close();">Log out</button></a><br>
+       <!--aquí abajo se pueden agregar mas opciones--> 
+
+
+
+    </mat-drawer>
+    <mat-drawer-content>
+      <!-- Aquí van las tablas y gráficas. Usar componentes para las gráficas -->
+
+      <app-perfil *ngIf="!showperfil"></app-perfil>
+      <app-lista *ngIf="!showcrearlista"></app-lista>
+      <app-lista-productos *ngIf="!showlistas"></app-lista-productos>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </mat-drawer-content>
+  </mat-drawer-container>
+  
