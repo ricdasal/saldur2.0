@@ -1354,3 +1354,418 @@ Processing by PedidosController#index as HTML
 Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms | Allocations: 970)
 
 
+Started GET "/pedidos" for 127.0.0.1 at 2022-08-29 00:47:14 -0500
+Processing by PedidosController#index as */*
+  [1m[36mPedido Load (0.8ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos"[0m
+  ↳ app/controllers/pedidos_controller.rb:4:in `index'
+Completed 200 OK in 20ms (Views: 19.8ms | ActiveRecord: 8.6ms | Allocations: 3757)
+
+
+Started GET "/pedidos" for 127.0.0.1 at 2022-08-29 00:49:30 -0500
+Processing by PedidosController#index as */*
+  [1m[36mPedido Load (0.3ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos"[0m
+  ↳ app/controllers/pedidos_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 933)
+
+
+Started GET "/pedidos" for 127.0.0.1 at 2022-08-29 00:49:50 -0500
+Processing by PedidosController#index as */*
+  [1m[36mPedido Load (0.3ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos"[0m
+  ↳ app/controllers/pedidos_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 933)
+
+
+Started GET "/pedidos" for 127.0.0.1 at 2022-08-29 00:51:18 -0500
+Processing by PedidosController#index as */*
+  [1m[36mPedido Load (0.3ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos"[0m
+  ↳ app/controllers/pedidos_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 933)
+
+
+Started GET "/pedidos" for 127.0.0.1 at 2022-08-29 00:52:21 -0500
+Processing by PedidosController#index as */*
+  [1m[36mPedido Load (0.6ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos"[0m
+  ↳ app/controllers/pedidos_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.6ms | Allocations: 933)
+
+
+Started GET "/pedidos" for 127.0.0.1 at 2022-08-29 00:52:37 -0500
+Processing by PedidosController#index as */*
+  [1m[36mPedido Load (0.3ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos"[0m
+  ↳ app/controllers/pedidos_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 933)
+
+
+Started GET "/pedidos" for 127.0.0.1 at 2022-08-29 00:52:57 -0500
+Processing by PedidosController#index as */*
+  [1m[36mPedido Load (0.3ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos"[0m
+  ↳ app/controllers/pedidos_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 945)
+
+
+Started GET "/pedidos" for 127.0.0.1 at 2022-08-29 00:54:54 -0500
+Processing by PedidosController#index as */*
+  [1m[36mPedido Load (0.3ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos"[0m
+  ↳ app/controllers/pedidos_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 933)
+
+
+Started GET "/pedidos" for 127.0.0.1 at 2022-08-29 00:55:35 -0500
+Processing by PedidosController#index as */*
+  [1m[36mPedido Load (0.3ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos"[0m
+  ↳ app/controllers/pedidos_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 933)
+
+
+Started GET "/items_pedido" for 127.0.0.1 at 2022-08-29 01:00:57 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/items_pedido"):
+  
+Started GET "/item_pedidos" for 127.0.0.1 at 2022-08-29 01:01:05 -0500
+Processing by ItemPedidosController#index as HTML
+  [1m[36mItemPedido Load (0.8ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos"[0m
+  ↳ app/controllers/item_pedidos_controller.rb:4:in `index'
+Completed 200 OK in 20ms (Views: 19.7ms | ActiveRecord: 8.8ms | Allocations: 4550)
+
+
+Started GET "/pedidos" for 127.0.0.1 at 2022-08-29 01:04:37 -0500
+Processing by PedidosController#index as */*
+  [1m[36mPedido Load (0.4ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos"[0m
+  ↳ app/controllers/pedidos_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms | Allocations: 960)
+
+
+Started GET "/pedidos" for 127.0.0.1 at 2022-08-29 01:09:09 -0500
+Processing by PedidosController#index as */*
+  [1m[36mPedido Load (0.3ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos"[0m
+  ↳ app/controllers/pedidos_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.3ms | Allocations: 933)
+
+
+Started GET "/pedidos" for 127.0.0.1 at 2022-08-29 01:09:31 -0500
+Processing by PedidosController#index as */*
+  [1m[36mPedido Load (0.3ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos"[0m
+  ↳ app/controllers/pedidos_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 933)
+
+
+Started GET "/pedidos" for 127.0.0.1 at 2022-08-29 01:11:42 -0500
+Processing by PedidosController#index as */*
+  [1m[36mPedido Load (0.5ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos"[0m
+  ↳ app/controllers/pedidos_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms | Allocations: 933)
+
+
+Started GET "/item_pedidos/1" for 127.0.0.1 at 2022-08-29 01:11:50 -0500
+Processing by ItemPedidosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mItemPedido Load (0.2ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 1]]
+  ↳ app/controllers/item_pedidos_controller.rb:9:in `show'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 1127)
+
+
+Started GET "/item_pedidos/2" for 127.0.0.1 at 2022-08-29 01:11:50 -0500
+Processing by ItemPedidosController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mItemPedido Load (0.3ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 2]]
+  ↳ app/controllers/item_pedidos_controller.rb:9:in `show'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 1017)
+
+
+Started GET "/item_pedidos/3" for 127.0.0.1 at 2022-08-29 01:11:50 -0500
+Processing by ItemPedidosController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mItemPedido Load (0.3ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 3]]
+  ↳ app/controllers/item_pedidos_controller.rb:9:in `show'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1095)
+
+
+Started GET "/item_pedidos/2" for 127.0.0.1 at 2022-08-29 01:11:51 -0500
+Processing by ItemPedidosController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mItemPedido Load (0.7ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 2]]
+  ↳ app/controllers/item_pedidos_controller.rb:9:in `show'
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.7ms | Allocations: 1017)
+
+
+Started GET "/item_pedidos/1" for 127.0.0.1 at 2022-08-29 01:11:51 -0500
+Processing by ItemPedidosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mItemPedido Load (0.7ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 1]]
+  ↳ app/controllers/item_pedidos_controller.rb:9:in `show'
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.7ms | Allocations: 1095)
+
+
+Started GET "/pedidos" for 127.0.0.1 at 2022-08-29 01:13:05 -0500
+Processing by PedidosController#index as */*
+  [1m[36mPedido Load (0.6ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos"[0m
+  ↳ app/controllers/pedidos_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.6ms | Allocations: 933)
+
+
+Started GET "/pedidos" for 127.0.0.1 at 2022-08-29 01:13:25 -0500
+Processing by PedidosController#index as */*
+  [1m[36mPedido Load (0.3ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos"[0m
+  ↳ app/controllers/pedidos_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 933)
+
+
+Started GET "/item_pedidos/1" for 127.0.0.1 at 2022-08-29 01:13:27 -0500
+Processing by ItemPedidosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mItemPedido Load (0.3ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 1]]
+  ↳ app/controllers/item_pedidos_controller.rb:9:in `show'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1095)
+
+
+Started GET "/pedidos" for 127.0.0.1 at 2022-08-29 01:13:49 -0500
+Processing by PedidosController#index as */*
+  [1m[36mPedido Load (0.3ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos"[0m
+  ↳ app/controllers/pedidos_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 933)
+
+
+Started GET "/pedidos" for 127.0.0.1 at 2022-08-29 01:13:51 -0500
+Processing by PedidosController#index as */*
+  [1m[36mPedido Load (0.3ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos"[0m
+  ↳ app/controllers/pedidos_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 933)
+
+
+Started GET "/item_pedidos/1" for 127.0.0.1 at 2022-08-29 01:13:52 -0500
+Processing by ItemPedidosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mItemPedido Load (0.2ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 1]]
+  ↳ app/controllers/item_pedidos_controller.rb:9:in `show'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.2ms | Allocations: 1096)
+
+
+Started GET "/item_pedidos/1" for 127.0.0.1 at 2022-08-29 01:13:53 -0500
+Processing by ItemPedidosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mItemPedido Load (0.5ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 1]]
+  ↳ app/controllers/item_pedidos_controller.rb:9:in `show'
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.5ms | Allocations: 1095)
+
+
+Started GET "/item_pedidos/1" for 127.0.0.1 at 2022-08-29 01:13:53 -0500
+Processing by ItemPedidosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mItemPedido Load (0.5ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 1]]
+  ↳ app/controllers/item_pedidos_controller.rb:9:in `show'
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.5ms | Allocations: 1095)
+
+
+Started GET "/item_pedidos/2" for 127.0.0.1 at 2022-08-29 01:13:53 -0500
+Processing by ItemPedidosController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mItemPedido Load (0.4ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 2]]
+  ↳ app/controllers/item_pedidos_controller.rb:9:in `show'
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.4ms | Allocations: 1018)
+
+
+Started GET "/item_pedidos/3" for 127.0.0.1 at 2022-08-29 01:13:54 -0500
+Processing by ItemPedidosController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mItemPedido Load (0.5ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 3]]
+  ↳ app/controllers/item_pedidos_controller.rb:9:in `show'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.5ms | Allocations: 1096)
+
+
+Started GET "/item_pedidos/2" for 127.0.0.1 at 2022-08-29 01:13:54 -0500
+Processing by ItemPedidosController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mItemPedido Load (0.5ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 2]]
+  ↳ app/controllers/item_pedidos_controller.rb:9:in `show'
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.5ms | Allocations: 1017)
+
+
+Started GET "/item_pedidos/1" for 127.0.0.1 at 2022-08-29 01:13:55 -0500
+Processing by ItemPedidosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mItemPedido Load (0.4ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 1]]
+  ↳ app/controllers/item_pedidos_controller.rb:9:in `show'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.4ms | Allocations: 1095)
+
+
+Started GET "/pedidos" for 127.0.0.1 at 2022-08-29 01:15:02 -0500
+Processing by PedidosController#index as */*
+  [1m[36mPedido Load (0.6ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos"[0m
+  ↳ app/controllers/pedidos_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.6ms | Allocations: 933)
+
+
+Started GET "/pedidos" for 127.0.0.1 at 2022-08-29 01:15:13 -0500
+Processing by PedidosController#index as */*
+  [1m[36mPedido Load (0.3ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos"[0m
+  ↳ app/controllers/pedidos_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 933)
+
+
+Started GET "/item_pedidos/1" for 127.0.0.1 at 2022-08-29 01:15:15 -0500
+Processing by ItemPedidosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mItemPedido Load (0.5ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 1]]
+  ↳ app/controllers/item_pedidos_controller.rb:9:in `show'
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.5ms | Allocations: 1095)
+
+
+Started GET "/item_pedidos/2" for 127.0.0.1 at 2022-08-29 01:16:36 -0500
+Processing by ItemPedidosController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mItemPedido Load (0.4ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 2]]
+  ↳ app/controllers/item_pedidos_controller.rb:9:in `show'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.4ms | Allocations: 1017)
+
+
+Started GET "/item_pedidos/3" for 127.0.0.1 at 2022-08-29 01:16:38 -0500
+Processing by ItemPedidosController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mItemPedido Load (0.3ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 3]]
+  ↳ app/controllers/item_pedidos_controller.rb:9:in `show'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.3ms | Allocations: 1095)
+
+
+Started GET "/item_pedidos/2" for 127.0.0.1 at 2022-08-29 01:16:40 -0500
+Processing by ItemPedidosController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mItemPedido Load (0.4ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 2]]
+  ↳ app/controllers/item_pedidos_controller.rb:9:in `show'
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.4ms | Allocations: 1017)
+
+
+Started GET "/item_pedidos/1" for 127.0.0.1 at 2022-08-29 01:16:40 -0500
+Processing by ItemPedidosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mItemPedido Load (0.5ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 1]]
+  ↳ app/controllers/item_pedidos_controller.rb:9:in `show'
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.5ms | Allocations: 1096)
+
+
+Started GET "/item_pedidos/2" for 127.0.0.1 at 2022-08-29 01:16:41 -0500
+Processing by ItemPedidosController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mItemPedido Load (0.4ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 2]]
+  ↳ app/controllers/item_pedidos_controller.rb:9:in `show'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.4ms | Allocations: 1017)
+
+
+Started GET "/item_pedidos/1" for 127.0.0.1 at 2022-08-29 01:16:42 -0500
+Processing by ItemPedidosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mItemPedido Load (0.6ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 1]]
+  ↳ app/controllers/item_pedidos_controller.rb:9:in `show'
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.6ms | Allocations: 1095)
+
+
+Started GET "/pedidos" for 127.0.0.1 at 2022-08-29 01:17:01 -0500
+Processing by PedidosController#index as */*
+  [1m[36mPedido Load (0.3ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos"[0m
+  ↳ app/controllers/pedidos_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 933)
+
+
+Started GET "/item_pedidos/1" for 127.0.0.1 at 2022-08-29 01:17:03 -0500
+Processing by ItemPedidosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mItemPedido Load (0.5ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 1]]
+  ↳ app/controllers/item_pedidos_controller.rb:9:in `show'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.5ms | Allocations: 1095)
+
+
+Started GET "/pedidos" for 127.0.0.1 at 2022-08-29 01:23:31 -0500
+Processing by PedidosController#index as */*
+  [1m[36mPedido Load (0.6ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos"[0m
+  ↳ app/controllers/pedidos_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 8.9ms | Allocations: 3796)
+
+
+Started GET "/pedidos" for 127.0.0.1 at 2022-08-29 01:29:14 -0500
+Processing by PedidosController#index as */*
+  [1m[36mPedido Load (0.7ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos"[0m
+  ↳ app/controllers/pedidos_controller.rb:4:in `index'
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 11.0ms | Allocations: 3756)
+
+
+Started GET "/productos" for 127.0.0.1 at 2022-08-29 01:57:28 -0500
+Processing by ProductosController#index as HTML
+  [1m[36mProducto Load (1.4ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+  ↳ app/controllers/productos_controller.rb:5:in `index'
+Completed 200 OK in 87ms (Views: 86.2ms | ActiveRecord: 29.6ms | Allocations: 5736)
+
+
+Started GET "/productos/1" for 127.0.0.1 at 2022-08-29 01:57:38 -0500
+Processing by ProductosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProducto Load (11.0ms)[0m  [1m[34mSELECT "productos".* FROM "productos" WHERE "productos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/productos_controller.rb:9:in `show'
+Completed 200 OK in 23ms (Views: 0.3ms | ActiveRecord: 11.4ms | Allocations: 770)
+
+
+Started GET "/pedidos" for 127.0.0.1 at 2022-08-29 01:59:05 -0500
+Processing by PedidosController#index as */*
+  [1m[36mPedido Load (0.5ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos"[0m
+  ↳ app/controllers/pedidos_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.5ms | Allocations: 933)
+
+
+Started GET "/item_pedidos/1" for 127.0.0.1 at 2022-08-29 01:59:08 -0500
+Processing by ItemPedidosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mItemPedido Load (1.1ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 1]]
+  ↳ app/controllers/item_pedidos_controller.rb:9:in `show'
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 1.1ms | Allocations: 1098)
+
+
+Started GET "/pedidos" for 127.0.0.1 at 2022-08-29 01:59:40 -0500
+Processing by PedidosController#index as */*
+  [1m[36mPedido Load (0.2ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos"[0m
+  ↳ app/controllers/pedidos_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.2ms | Allocations: 933)
+
+
+Started GET "/item_pedidos/1" for 127.0.0.1 at 2022-08-29 01:59:42 -0500
+Processing by ItemPedidosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mItemPedido Load (0.5ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 1]]
+  ↳ app/controllers/item_pedidos_controller.rb:9:in `show'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 1095)
+
+
+Started GET "/pedidos" for 127.0.0.1 at 2022-08-29 01:59:50 -0500
+Processing by PedidosController#index as */*
+  [1m[36mPedido Load (0.4ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos"[0m
+  ↳ app/controllers/pedidos_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 933)
+
+
+Started GET "/item_pedidos/1" for 127.0.0.1 at 2022-08-29 01:59:52 -0500
+Processing by ItemPedidosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mItemPedido Load (0.8ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 1]]
+  ↳ app/controllers/item_pedidos_controller.rb:9:in `show'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.8ms | Allocations: 1095)
+
+
+Started GET "/pedidos" for 127.0.0.1 at 2022-08-29 02:01:06 -0500
+Processing by PedidosController#index as */*
+  [1m[36mPedido Load (0.3ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos"[0m
+  ↳ app/controllers/pedidos_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 933)
+
+
+Started GET "/pedidos" for 127.0.0.1 at 2022-08-29 02:02:06 -0500
+Processing by PedidosController#index as */*
+  [1m[36mPedido Load (0.3ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos"[0m
+  ↳ app/controllers/pedidos_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.3ms | Allocations: 933)
+
+
+Started GET "/item_pedidos/1" for 127.0.0.1 at 2022-08-29 02:02:07 -0500
+Processing by ItemPedidosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mItemPedido Load (0.6ms)[0m  [1m[34mSELECT "item_pedidos".* FROM "item_pedidos" WHERE "item_pedidos"."id_pedido" = $1[0m  [["id_pedido", 1]]
+  ↳ app/controllers/item_pedidos_controller.rb:9:in `show'
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.6ms | Allocations: 1095)
+
+
