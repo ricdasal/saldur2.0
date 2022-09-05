@@ -7,7 +7,7 @@ import { AppComponent } from '../app.component';
   styleUrls: ['./productos.component.css']
 })
 export class ProductosComponent implements OnInit {
-  
+
   productos:Array<any> = [];
   productoFiltrado: Array<any> = [];
   constructor(app:AppComponent) {
@@ -20,11 +20,11 @@ export class ProductosComponent implements OnInit {
   }
 
   cargarProductos(): void {
-    fetch("assets/databases/data.json")
+    fetch("http://localhost:8080/items")
     .then(response => response.json())
     .then(productos => {
      
-      this.productos =  productos.productos;
+      this.productos =  productos;
       this.productoFiltrado = this.productos;
     })
     .catch(console.error);
@@ -50,8 +50,5 @@ export class ProductosComponent implements OnInit {
      
     }
   }
-
-  
-  
 
 }

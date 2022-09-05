@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :items
+  resources :users
   resources :item_pedidos
   resources :pedidos
   resources :clientes
@@ -9,10 +11,12 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   #resources :secret_menu_items, only: [:index, :show, :create, :update, :destroy]
-  resources :productos, only: [:index, :create, :update, :destroy]
+  resources :items, only: [:index, :create]
   resources :clientes, only: [:index, :create, :update, :destroy]
   resources :pedidos, only: [:index, :create, :update, :destroy]
   resources :items_pedidos, only: [:index, :create, :update, :destroy]
+  #resources :users, only: [:index, :create, :update, :destroy, validate]
+  
 
 end
 #Ricardo Salazar

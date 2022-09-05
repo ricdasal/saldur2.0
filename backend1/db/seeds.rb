@@ -45,3 +45,15 @@
 # item11 = ItemPedido.create(id_pedido:3, id_producto:4 , cantidad: 1)
 # item12 = ItemPedido.create(id_pedido:3, id_producto:3 , cantidad: 1)
 # item13 = ItemPedido.create(id_pedido:3, id_producto:5 , cantidad: 1)
+
+
+# item = Item.create(codigo: "AW-46", nombre: "Hidráulico-Rojo", descripcion: "Caneca 5 Galones", precio: 55, imagen: "/img/Productos/Canecas/Hidraulico.png")
+# item1 = Item.create(codigo: "AW-68", nombre: "Hidráulico-Amarillo", descripcion: "Caneca 5 galones", precio: 55, imagen: "/img/Productos/Canecas/Hidraulico.png")
+# item2 = Item.create(codigo: "AW-100", nombre: "Hidráulico AW-100", descripcion: "Caneca 5 galones", precio: 60, imagen: "/img/Productos/Canecas/Hidraulico.png")
+# item3 = Item.create(codigo: "SAE-CI-4/SL", nombre: "15W-40",  descripcion: "Caneca 5 galones", precio: 78, imagen: "/img/Productos/Canecas/15W40.png")
+# item5 = Item.create(codigo: "SAE-40-CF/SL", nombre: "SAE 40 CF/SL", descripcion: "Caneca 5 galones", precio: 70 , imagen: "/img/Productos/Canecas/SAE-40.png")
+# item6 = Item.create(codigo: "SAE90", nombre: "Transmisión SAE 90", descripcion: "Tanque 55 galones", precio: 680 , imagen: "/img/Productos/Tanques/Transmision.png")
+# item8 = Item.create(codigo: "TAW-46" , nombre: "Hidráulico-Rojo" , descripcion: "Tanque 55 galones", precio: 350 , imagen: "/img/Productos/Tanques/Hidraulico.png")
+# item9 = Item.create(codigo: "TAW-48" , nombre: "Hidráulico-Amarillo" , descripcion: "Tanque 55 galones", precio: 350 , imagen: "/img/Productos/Tanques/Hidraulico.png")
+# item10 = Item.create(codigo: "25W-60", nombre: "SAE 25w60 CF", descripcion: "Tanque 55 galones", precio: 680 , imagen: "/img/Productos/Tanques/25W60.png")
+# item11 = Item.create(codigo: "SAE-CI-40/SL", nombre: "15W-40",  descripcion: "Tanque 55 galones", precio: 78, imagen: "/img/Productos/Tanques/15W40.png")

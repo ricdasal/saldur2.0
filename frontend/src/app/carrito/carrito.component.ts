@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { AppComponent } from '../app.component';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogProductoComponent } from './dialog-producto/dialog-producto.component';
 
 @Component({
   selector: 'app-carrito',
@@ -7,13 +9,17 @@ import { AppComponent } from '../app.component';
   styleUrls: ['./carrito.component.css']
 })
 export class CarritoComponent implements OnInit {
-
   productos:Array<any> = [];
   productoFiltrado: Array<any> = [];
 
+  lista_carrito: Array<any> = [];
+  lista_muestra: Array<any> = [];
+
   generar_pedido: boolean =  true;
   generado: boolean = true;
-  constructor(app:AppComponent) {
+  mostrarTabla: boolean = false;
+
+  constructor(app:AppComponent, public dialog: MatDialog) {
     app.showNav = false;
     app.showFoot = false; 
    }
@@ -26,13 +32,18 @@ export class CarritoComponent implements OnInit {
     this.generar_pedido = false;
     this.generado = false;
   }
+  generar1(): void {
+    this.generar_pedido = true;
+    this.mostrarTabla = true;
+
+  }
 
   cargarProductos(): void {
-    fetch("assets/databases/data.json")
+    fetch("http://localhost:8080/items")
     .then(response => response.json())
     .then(productos => {
      
-      this.productos =  productos.productos;
+      this.productos =  productos;
       this.productoFiltrado = this.productos;
     })
     .catch(console.error);
@@ -59,4 +70,26 @@ export class CarritoComponent implements OnInit {
     }
 
   }
+
+  getProducto(producto: any):void {
+    const dialogRef = this.dialog.open(DialogProductoComponent, {
+      width: '500px',
+      data: {producto: producto, carrito: this.lista_carrito},
+      
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+
+  }
+
+  mostrarPedido(){
+    this.lista_muestra = [];
+    this.lista_carrito.forEach(item =>{
+      this.lista_muestra.push(item)
+    })
+    
+
+  }
+
 }

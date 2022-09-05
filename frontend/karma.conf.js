@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/front-Saldur'),
+      dir: require('path').join(__dirname, './coverage/saldur2'),
       subdir: '.',
       reporters: [
         { type: 'html' },

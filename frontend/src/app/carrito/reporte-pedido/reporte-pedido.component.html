@@ -1,0 +1,46 @@
+<br>
+<br>
+<br>
+
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Cliente</th>
+        <th scope="col">Lista de pedido</th>
+        <th scope="col">Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pedido of listas" >
+        <th scope="row">{{pedido.id}}</th>
+        <td>{{pedido.nombre_ciente}}</td>
+        <td><button class="btn btn-info" (click)="obtenerItems(pedido.id)">lista</button></td>
+        <td>{{pedido.estado}}</td>
+        
+      </tr>
+      
+    </tbody>
+  </table>
+
+  <table *ngIf="!mostrarTabla" class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#pedido</th>
+        <th scope="col">Producto</th>
+        <th scope="col">Cantidad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pedido of lista_items" >
+        <th scope="row">{{pedido.id}}</th>
+        <td>{{pedido.id_producto}}</td>
+        <td>{{pedido.cantidad}}</td>
+        
+      </tr>
+      
+    </tbody>
+  </table>
+
+
+

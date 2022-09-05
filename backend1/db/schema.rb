@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_26_110330) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_04_215300) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -31,6 +31,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_26_110330) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "items", force: :cascade do |t|
+    t.string "codigo"
+    t.string "nombre"
+    t.string "descripcion"
+    t.integer "precio"
+    t.string "imagen"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "pedidos", force: :cascade do |t|
     t.string "nombre_ciente"
     t.string "direccion"
@@ -39,18 +49,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_26_110330) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "productos", force: :cascade do |t|
-    t.string "nombre"
-    t.string "descripcion"
-    t.integer "precio"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "secret_menu_items", force: :cascade do |t|
-    t.string "menu_name"
-    t.string "restaurant_name"
-    t.string "menu_description"
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password"
+    t.string "cliente_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,0 +1,18 @@
+
+
+<h1 mat-dialog-title>producto: {{data.producto.nombre}}</h1>
+<div mat-dialog-content>
+  <p>Seleccione cantidad</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Seleccione cantidad</mat-label>
+    <mat-form-field appearance="fill">
+        <mat-label>Cantidad</mat-label>
+        <input [(ngModel)]="cantidad" #ctrl="ngModel" required>
+      </mat-form-field>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="aceptar(data.carrito, data.producto);onNoClick();" >Aceptar</button>
+    <button mat-button (click)="onNoClick()">No Thanks</button>
+  
+</div>

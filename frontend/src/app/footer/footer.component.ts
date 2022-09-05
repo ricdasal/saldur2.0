@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RequiredValidator } from '@angular/forms';
-declare var require: any;
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-footer',
@@ -8,7 +7,6 @@ declare var require: any;
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
-  
 
   constructor() { }
 

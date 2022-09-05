@@ -8,15 +8,38 @@
             <button id="Tanques"  *ngIf = "!generar_pedido" type="button" class="btn btn-info" data-intro="Si deseas ver solo los tanques, presiona este botón.." data-step="2" (click) ="filtroTanque()">Tanques</button>
             <button id="Canecas"  *ngIf = "!generar_pedido" type="button" class="btn btn-success" data-intro="Si deseas ver solo las canecas, presiona este botón" data-step="3"(click) ="filtroCaneca()">Canecas</button>
             <button type="button" class="btn btn-success" *ngIf= "generado" (click)="generar()">Pedido</button>
-            <button routerLink="/carrito/pedido" type="button" class="btn btn-success" *ngIf= "!generado" (click)="generar()">Pedidos</button>
+            <button type="button" class="btn btn-success" *ngIf= "!generado" (click)="mostrarPedido();generar1()">Mostrar Compra</button>
 
           </div>
-      </div>
- 
+      </div> 
+    </div>
+
+    <div *ngIf = "mostrarTabla">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">id producto</th>
+            <th scope="col">Producto</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of lista_muestra" >
+            <th scope="row">{{item.product.codigo}}</th>
+            <td>{{item.product.nombre}}</td>
+            <td>{{item.cantidad}}</td>
+            <td>{{item.product.precio}}</td>
+            
+          </tr>
+          
+        </tbody>
+      </table>
+  
     </div>
 
   <div id="productos-lista" *ngIf = "!generar_pedido">
-    <div *ngFor="let producto of productoFiltrado" class="caja">
+    <div *ngFor="let producto of productoFiltrado" class="caja" (click)="getProducto(producto);">
       <img class="img_producto" src="assets/{{producto.imagen}}"  class = "imagenes">
       <div class="informacion_prod">
           <h3 class="nombres_prod">{{producto.nombre}}</h3>
@@ -27,5 +50,28 @@
 
   </div>
 
+  <div class="login-box">
+    <img src="assets/img/DashBoard/admin.jfif" class="avatar" alt="Avatar Image">
+    <h1>Iniciar Sesion</h1>
+    <form ngNoForm action="http://localhost:3000/pedidos" method="POST">
+        <!-- USERNAME INPUT -->
+        <label for="username">e-mail</label>
+        <input id="user" name="user" type="text" placeholder="ingrese el correo">
+        <!-- PASSWORD INPUT -->
+        <label for="password">Contraseña</label>
+        <input id="password" name="password" type="password" placeholder="Ingrese su contraseña">
+        <input type="submit" value="Entrar">
+        <a href="#">Olvidaste la contrasena?</a><br>
+        <a routerLink='/signup'>Registrate</a><br>
+        <a routerLink='/'>atrás</a>
+    </form>
+    </div>
+
   
   </section>
+  <section>
+   
+
+  </section>
+  <br>
+  <br>

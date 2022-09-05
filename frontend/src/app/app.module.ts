@@ -1,49 +1,24 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatToolbarModule} from '@angular/material/toolbar'; 
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatSelectModule} from '@angular/material/select';
-import {MatCardModule} from '@angular/material/card';
-import {MatBadgeModule} from '@angular/material/badge';
-import {MatTableModule} from '@angular/material/table';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { IndexComponent } from './index/index.component';
 import { ProductosComponent } from './productos/productos.component';
-import { NoticiasComponent } from './noticias/noticias.component';
-import { DevelopersComponent } from './developers/developers.component';
-import { ContactenosComponent } from './contactenos/contactenos.component';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
-import { MessageService } from './services/message.service';
-import { GraficasComponent } from './graficas/graficas.component';
-import { GraficasService } from './services/graficas.service';
-import { ClienteComponent } from './usersModules/cliente/cliente.component';
-import { AdministratorComponent } from './usersModules/administrator/administrator.component';
-import { PerfilComponent } from './usersModules/cliente/perfil/perfil.component';
-import { ListaProductosComponent } from './usersModules/cliente/lista-productos/lista-productos.component';
-import { ListaComponent } from './usersModules/cliente/lista/lista.component';
-import { ReporteProductosComponent } from './usersModules/administrator/reporte-productos/reporte-productos.component';
-import { BarComponent } from './usersModules/administrator/bar/bar.component';
-import { PieComponent } from './usersModules/administrator/pie/pie.component';
-import { AgregarProductoComponent } from './usersModules/administrator/agregar-producto/agregar-producto.component';
-import { MultilineComponent } from './usersModules/administrator/multiline/multiline.component';
 import { CarritoComponent } from './carrito/carrito.component';
-import { TablacarritoComponent } from './carrito/tablacarrito/tablacarrito.component';
-
-
-
+import { ReportePedidoComponent } from './carrito/reporte-pedido/reporte-pedido.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DialogProductoComponent } from './carrito/dialog-producto/dialog-producto.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatButtonModule} from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+import { ListaCarritoComponent } from './carrito/lista-carrito/lista-carrito.component';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 
 @NgModule({
@@ -53,47 +28,28 @@ import { TablacarritoComponent } from './carrito/tablacarrito/tablacarrito.compo
     FooterComponent,
     IndexComponent,
     ProductosComponent,
-    NoticiasComponent,
-    DevelopersComponent,
-    ContactenosComponent,
-    LoginComponent,
-    SignupComponent,
-    GraficasComponent,
-    ClienteComponent,
-    AdministratorComponent,
-    PerfilComponent,
-    ListaComponent,
-    ListaProductosComponent,
-    ReporteProductosComponent,
-    BarComponent,
-    PieComponent,
-    AgregarProductoComponent,
-    MultilineComponent,
     CarritoComponent,
-    TablacarritoComponent,
+    ReportePedidoComponent,
+    DialogProductoComponent,
+    ListaCarritoComponent,
+ 
     
-
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     NgbModule,
-    HttpClientModule,
-    MatSidenavModule,
     BrowserAnimationsModule,
-    NoopAnimationsModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
+    MatDialogModule,
     MatFormFieldModule,
-    MatSelectModule,
-    MatCardModule,
-    MatBadgeModule,
-    MatTableModule
+    MatButtonModule,
+    FormsModule,
+    MatInputModule,
+    GoogleMapsModule ,
+    
   ],
-  providers: [MessageService,GraficasService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

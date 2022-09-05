@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AppComponent } from '../app.component';
-//import * as introJs from 'intro.js';
-
 
 @Component({
   selector: 'app-index',
@@ -10,17 +8,12 @@ import { AppComponent } from '../app.component';
 })
 export class IndexComponent implements OnInit {
 
-  constructor(app: AppComponent) { 
+  constructor(app: AppComponent) {
     app.showNav = false;
-    app.showFoot = false; 
-  }
+    app.showFoot = false;
+   }
 
   ngOnInit(): void {
-   
-  }
-
-  play(): void{
-    //introJs().start();
   }
 
 }
