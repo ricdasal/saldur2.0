@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_pedido: MyString
+  nombre: MyString
+  telefono: MyString
+  direccion: MyString
+  estado: MyString
+
+two:
+  id_pedido: MyString
+  nombre: MyString
+  telefono: MyString
+  direccion: MyString
+  estado: MyString

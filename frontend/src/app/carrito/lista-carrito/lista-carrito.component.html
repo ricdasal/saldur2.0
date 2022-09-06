@@ -1,14 +1,17 @@
+<h1>Ver pedidos</h1> <br>
+
 <google-map
     height="500px"
     width="100%"
     [center]="center"
     [zoom]="zoom"
     (mapClick)="moveMap($event)"
-    (mapMousemove)="move($event)"
-    (mapClick)="addMarker($event)">
+    (mapMousemove)="move($event)">
     <map-marker *ngFor="let markerPosition of markerPositions"
               [position]="markerPosition"
               [options]="markerOptions"></map-marker>
 </google-map>
 <div>Latitude: {{display?.lat}}</div>
 <div>Longitude: {{display?.lng}}</div>
+
+<app-reporte-pedido></app-reporte-pedido>

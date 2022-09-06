@@ -5,12 +5,12 @@ class ItemsController < ApplicationController
     end 
 
     def show
-        @items = SecretMenuItem.find(params[:id])
+        @items = Item.find(params[:id])
         render json: @items
     end 
 
     def create
-        @items = SecretMenuItem.create(
+        @items = Item.create(
             codigo: params[:codigo],
             nombre: params[:nombre],
             descripcion: params[:descripcion],
@@ -21,7 +21,7 @@ class ItemsController < ApplicationController
     end 
 
     def update
-        @secretMenuItem = SecretMenuItem.find(params[:id])
+        @secretMenuItem = Item.find(params[:id])
         @secretMenuItem.update(
             menu_name: params[:menu_name],
             restaurant_name: params[:restaurant_name],
@@ -31,8 +31,8 @@ class ItemsController < ApplicationController
     end 
 
     def destroy
-        @secretMenuItems = SecretMenuItem.all 
-        @secretMenuItem = SecretMenuItem.find(params[:id])
+        @secretMenuItems = Item.all 
+        @secretMenuItem = Item.find(params[:id])
         @secretMenuItem.destroy
         render json: @secretMenuItems
     end 

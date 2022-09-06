@@ -7,24 +7,6 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 
-# producto1 = Producto.create(nombre: "Motoroil 40", descripcion: "Tanque 255 galones", precio: 1)
-# producto2 = Producto.create(nombre: "2 tiempos", descripcion: "Tanque 255 galones", precio: 2)
-# producto5 = Producto.create(nombre: "SAE 40", descripcion: "Tanque 255 galones", precio: 490)
-# producto3 = Producto.create(nombre: "Hidraulico Amarillo", descripcion: "Tanque de 255 galones", precio: 360)
-# producto4 = Producto.create(nombre: "Hidraulico Rojo", descripcion: "Tanque de 255 galones", precio: 360)
-
-
-
-# cliente1 = Cliente.create(nombre: "aaaaaaaa", cedula: "0000000000", correo: "laksdjlaskd@asdjasd.ec", telefono: "5555555555")
-# cliente2 = Cliente.create(nombre: "aaaaaaaa", cedula: "0000000000", correo: "laksdjlaskd@asdjasd.ec", telefono: "5555555555")
-# cliente3 = Cliente.create(nombre: "aaaaaaaa", cedula: "0000000000", correo: "laksdjlaskd@asdjasd.ec", telefono: "5555555555")
-# cliente4 = Cliente.create(nombre: "aaaaaaaa", cedula: "0000000000", correo: "laksdjlaskd@asdjasd.ec", telefono: "5555555555")
-# cliente5 = Cliente.create(nombre: "aaaaaaaa", cedula: "0000000000", correo: "laksdjlaskd@asdjasd.ec", telefono: "5555555555")
-# cliente6 = Cliente.create(nombre: "aaaaaaaa", cedula: "0000000000", correo: "laksdjlaskd@asdjasd.ec", telefono: "5555555555")
-# cliente7 = Cliente.create(nombre: "aaaaaaaa", cedula: "0000000000", correo: "laksdjlaskd@asdjasd.ec", telefono: "5555555555")
-# cliente8 = Cliente.create(nombre: "aaaaaaaa", cedula: "0000000000", correo: "laksdjlaskd@asdjasd.ec", telefono: "5555555555")
-# cliente9 = Cliente.create(nombre: "aaaaaaaa", cedula: "0000000000", correo: "laksdjlaskd@asdjasd.ec", telefono: "5555555555")
-# cliente10 = Cliente.create(nombre: "aaaaaaaa", cedula: "0000000000", correo: "laksdjlaskd@asdjasd.ec", telefono: "5555555555")
 
 
 # pedido = Pedido.create(nombre_ciente: "aaaaaaaa", direccion:"3215132;65465465;654654", estado: "aprobado")

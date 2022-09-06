@@ -7,8 +7,11 @@
             <button id="Todos"  *ngIf = "!generar_pedido" type="button" class="btn btn-warning" data-intro="Si deseas ver todos nuestros productos, presiona este botón." data-step="1" (click) ="cargarProductos()">Todos</button>
             <button id="Tanques"  *ngIf = "!generar_pedido" type="button" class="btn btn-info" data-intro="Si deseas ver solo los tanques, presiona este botón.." data-step="2" (click) ="filtroTanque()">Tanques</button>
             <button id="Canecas"  *ngIf = "!generar_pedido" type="button" class="btn btn-success" data-intro="Si deseas ver solo las canecas, presiona este botón" data-step="3"(click) ="filtroCaneca()">Canecas</button>
-            <button type="button" class="btn btn-success" *ngIf= "generado" (click)="generar()">Pedido</button>
-            <button type="button" class="btn btn-success" *ngIf= "!generado" (click)="mostrarPedido();generar1()">Mostrar Compra</button>
+            <button type="button" class="btn btn-success" *ngIf= "generado" (click)="generar();cargarContador();">Pedido</button>
+            <button type="button" class="btn btn-success" *ngIf= "!generado" (click)="mostrarPedido();generar1()">Compra</button>
+            <button type="button" class="btn btn-success" *ngIf= "btnSiguiente" (click)="mostrarPedido();generar1();generarForm()">Siguiente</button>
+            <button type="button" class="btn btn-success" *ngIf= "btnGuardado" (click)="mostrarPedido();generar1();ocultarForm();guardarDatos();btnOff()">Guardar Items</button>
+
 
           </div>
       </div> 
@@ -50,28 +53,53 @@
 
   </div>
 
-  <div class="login-box">
-    <img src="assets/img/DashBoard/admin.jfif" class="avatar" alt="Avatar Image">
-    <h1>Iniciar Sesion</h1>
-    <form ngNoForm action="http://localhost:3000/pedidos" method="POST">
-        <!-- USERNAME INPUT -->
-        <label for="username">e-mail</label>
-        <input id="user" name="user" type="text" placeholder="ingrese el correo">
-        <!-- PASSWORD INPUT -->
-        <label for="password">Contraseña</label>
-        <input id="password" name="password" type="password" placeholder="Ingrese su contraseña">
-        <input type="submit" value="Entrar">
-        <a href="#">Olvidaste la contrasena?</a><br>
-        <a routerLink='/signup'>Registrate</a><br>
-        <a routerLink='/'>atrás</a>
-    </form>
-    </div>
+  
 
   
-  </section>
-  <section>
-   
+  </section >
+  <section *ngIf="mostrarForm">
+    <div class="login-box">
+      <h1>Enviar pedido</h1>
+      <form ngNoForm (submit)="guardarDatos()" action="http://localhost:8080/lista_pedidos/" method="POST">
+          <!--ID-->
+          <label for="id_pedido">id</label>
+          <input id="id_pedido" name="id_pedido" type="text" [(ngModel)] ="counter">
+          <!-- USERNAME INPUT -->
+          <label for="nombre_ciente">nombre</label>
+          <input id="nombre_ciente" name="nombre" type="text" placeholder="Ingrese sus nombres">
+          <!--TELEFONO-->
+          <label for="telefono">Teléfono</label>
+          <input id="telefono" name="telefono" type="text" placeholder="su numero de telefono">
+          <!-- PASSWORD INPUT -->
+          <label for="direccion">Direccion</label>
+          <input id="direccion" name="direccion" type="text" placeholder="Seleccione la ubicacion en el mapa" [(ngModel)]="posicionR" readonly>
+            <google-map
+              height="500px"
+              width="100%"
+              [center]="center"
+              [zoom]="zoom"
+              (mapClick)="moveMap($event)"
+              (mapMousemove)="move($event)"
+              (mapClick)="addMarker($event)">
+              <map-marker
+                [position]="markerPositions"
+                [options]="markerOptions">
+              </map-marker>
+            </google-map>
+            <br>
+            <label for="estado">Estado</label>
+            <input type="text" name = "estado" [(ngModel)] = "estado" readonly>
 
+          <input type="submit" value="registrar pedido" >
+      </form>
+      </div>
+
+
+
+  </section>
+
+  <section>
+    
   </section>
   <br>
   <br>

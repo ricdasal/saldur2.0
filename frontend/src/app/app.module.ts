@@ -19,6 +19,9 @@ import { FormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import { ListaCarritoComponent } from './carrito/lista-carrito/lista-carrito.component';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 
 @NgModule({
@@ -46,8 +49,9 @@ import { GoogleMapsModule } from '@angular/google-maps';
     MatButtonModule,
     FormsModule,
     MatInputModule,
-    GoogleMapsModule ,
-    
+    GoogleMapsModule,
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+interface prod {
+  
+}
+
 @Component({
   selector: 'app-reporte-pedido',
   templateUrl: './reporte-pedido.component.html',
@@ -16,7 +20,7 @@ export class ReportePedidoComponent implements OnInit {
 
 
   ngOnInit(): void {
-    fetch("http://localhost:8080/pedidos")
+    fetch("http://localhost:8080/lista_pedidos")
     .then(response => response.json())
     .then(listas => {
       this.listas = listas 
@@ -30,7 +34,7 @@ export class ReportePedidoComponent implements OnInit {
 
   obtenerItems(id_pedido:string){
     this.mostrarTabla = false;
-    fetch("http://localhost:8080/item_pedidos" + id_pedido)
+    fetch("http://localhost:8080/item_pedidos/" + id_pedido)
     .then(response => response.json())
     .then(listas => {
       this.lista_items = listas; 

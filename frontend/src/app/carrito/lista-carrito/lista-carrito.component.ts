@@ -27,15 +27,50 @@ export class ListaCarritoComponent implements OnInit {
     }
   
   
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
+    this.cargarPedidos();
     
 
   }
-  addMarker(event: google.maps.MapMouseEvent) {
-    if (event.latLng != null) this.markerPositions.push(event.latLng.toJSON());
+//   addMarker(event: google.maps.MapMouseEvent) {
+//     if (event.latLng != null) this.markerPositions.push(event.latLng.toJSON());
+// }
+
+
+cargarPedidos(){
+  fetch("http://localhost:8080/lista_pedidos")
+    .then(response => response.json())
+    .then(pedidos => {
+      pedidos.forEach((C:any) => {
+        const minilist = C.direccion.split(";");
+        console.log(minilist)
+        var chicago = {lat: Number(minilist[0]), lng: Number(minilist[1])};
+        this.markerPositions.push(chicago)
+
+
+      });
+      
+    })
+    .catch(console.error);
 }
 
+iniciarMarkers(){
+  this.lista_carrito.forEach((C:any) => {
+    const minilist = C.direccion.split();
+    // const marker = new google.maps.Marker({
+    //   // The below line is equivalent to writing:
+    //   // position: new google.maps.LatLng(-34.397, 150.644)
+    //   position: { lat: Number(minilist[0]), lng: Number(minilist[1]) }
+    // });
+    // this.lista_markers.push(marker);
+    var chicago = {lat: Number(minilist[0]), lng: Number(minilist[1])};
+    this.markerPositions.push(chicago)
 
+
+
+
+  })
+}
 }

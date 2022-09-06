@@ -1,0 +1,2 @@
+class ListaPedido < ApplicationRecord
+end

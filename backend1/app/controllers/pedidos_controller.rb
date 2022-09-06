@@ -16,7 +16,7 @@ class PedidosController < ApplicationController
             estado: params[:estado],
 
         )
-        render json: @pedidos
+        redirect_to "http://localhost:4200/carrito", allow_other_host: true
     end 
 
     def update
